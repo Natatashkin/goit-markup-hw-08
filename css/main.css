@@ -1,0 +1,226 @@
+@charset "UTF-8";
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.container {
+  padding: 0 15px;
+  margin: 0 auto;
+  height: 60px;
+}
+
+@media screen and (min-width: 480px) {
+  .container {
+    width: 480px;
+    height: 80px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+    height: 80px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
+    height: 80px;
+  }
+}
+
+body {
+  background-color: #ffffff;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.03em;
+  color: #757575;
+  line-height: 1.14;
+}
+
+main {
+  background-color: #ffffff;
+}
+
+address {
+  font-style: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #212121;
+  letter-spacing: 0.03em;
+}
+
+footer {
+  background-color: #2f303a;
+  color: #ffffff;
+}
+
+/* -------Стили Логотипа-------- */
+.logo {
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  text-decoration: none;
+  letter-spacing: 0.03em;
+  color: #2196f3;
+  font-size: 26px;
+  line-height: 1.19;
+}
+
+.logo-top {
+  color: #000000;
+}
+
+.logo-bottom {
+  color: #ffffff;
+}
+
+.nav-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.top-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: inherit;
+      -ms-flex-align: inherit;
+          align-items: inherit;
+}
+
+.main-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  letter-spacing: 0.02em;
+  font-weight: 500;
+  padding-left: 0;
+  margin: 0 0 0 85px;
+}
+
+.link {
+  position: relative;
+  color: #212121;
+  text-decoration: none;
+  display: block;
+  padding: 32px 0;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.link:hover, .link:focus {
+  color: #2196f3;
+}
+
+.current {
+  position: relative;
+  color: #2196f3;
+}
+
+.current::after {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background-color: #2196f3;
+}
+
+.main-menu .item:not(:last-child) {
+  margin-right: 50px;
+}
+
+/* ------Стилизация блока контактов в шапке------- */
+.top-сontacts {
+  color: #757575;
+  text-decoration: none;
+  letter-spacing: 0.02em;
+  font-weight: 500;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.top-сontacts:hover, .top-сontacts:focus {
+  color: #2196f3;
+}
+
+.top-address .top-сontacts:not(:first-child) {
+  margin-left: 30px;
+}
+
+.top-address {
+  margin-left: auto;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.envelope,
+.smartphone {
+  fill: #757575;
+  margin-right: 10px;
+  -webkit-transition-property: fill;
+  transition-property: fill;
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.top-сontacts:hover .envelope,
+.top-сontacts:focus .envelope, .top-сontacts:hover
+.smartphone,
+.top-сontacts:focus
+.smartphone {
+  fill: #2196f3;
+}
+
+.envelope {
+  width: 16px;
+  height: 11.2px;
+}
+
+.smartphone {
+  width: 10px;
+  height: 14.94px;
+}
+/*# sourceMappingURL=main.css.map */
