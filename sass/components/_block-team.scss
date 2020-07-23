@@ -9,8 +9,13 @@
 }
 
 .team-card {
+  width: 100%;
   box-shadow: $box-shadow;
   border-radius: 0px 0px 4px 4px;
+
+  @media screen and (min-width: 480px) {
+    width: 480px;
+  }
 
   @media screen and (min-width: 768px) {
     width: 354px;
