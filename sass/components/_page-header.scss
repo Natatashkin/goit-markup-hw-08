@@ -1,16 +1,59 @@
 .nav-wrapper {
+  position: relative;
   display: flex;
   align-items: center;
 }
-
 .top-nav {
   display: flex;
   align-items: inherit;
+  // justify-content: space-between;
+  min-width: 100%;
+  min-height: 60px;
+}
+
+.menu-button {
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  margin-left: auto;
+
+  @include transitionProperty(fill);
+
+  & .icon-cross {
+    display: none;
+  }
+
+  &.is-open .icon-cross {
+    display: block;
+  }
+
+  &.is-open .icon-burger {
+    display: none;
+  }
+
+  &:hover .icon-burger,
+  &:focus .icon-burger,
+  &:hover .icon-cross,
+  &:focus .icon-cross {
+    fill: $akcent-color;
+  }
+}
+
+.menu-container {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: red;
+
+  &.is-open {
+    display: block;
+  }
 }
 
 .main-menu {
-  display: flex;
-
   list-style: none;
   letter-spacing: 0.02em;
   font-weight: 500;
@@ -60,57 +103,58 @@
   margin-right: 50px;
 }
 
-/* ------Стилизация блока контактов в шапке------- */
+// /* ------Стилизация блока контактов в шапке------- */
 
-.top-сontacts {
-  color: $text-color;
-  text-decoration: none;
-  letter-spacing: 0.02em;
-  font-weight: 500;
-  display: inline-flex;
-  align-items: center;
+// .top-сontacts {
+//   color: $text-color;
+//   text-decoration: none;
+//   letter-spacing: 0.02em;
+//   font-weight: 500;
+//   display: inline-flex;
+//   align-items: center;
 
-  transition-property: color;
-  transition-duration: 250ms;
-  transition-timing-function: $cubic;
+//   transition-property: color;
+//   transition-duration: 250ms;
+//   transition-timing-function: $cubic;
 
-  &:hover,
-  &:focus {
-    color: $akcent-color;
-  }
+//   &:hover,
+//   &:focus {
+//     color: $akcent-color;
+//   }
 
-  .top-address &:not(:first-child) {
-    margin-left: 30px;
-  }
-}
+//   .top-address &:not(:first-child) {
+//     margin-left: 30px;
+//   }
+// }
 
-.top-address {
-  margin-left: auto;
-  display: inline-flex;
-  align-items: center;
-}
+// .top-address {
+//   margin-left: auto;
+//   // display: inline-flex;
+//   align-items: center;
+//   display: none;
+// }
 
-.envelope,
-.smartphone {
-  fill: $text-color;
-  margin-right: 10px;
+// .envelope,
+// .smartphone {
+//   fill: $text-color;
+//   margin-right: 10px;
 
-  transition-property: fill;
-  transition-duration: 250ms;
-  transition-timing-function: $cubic;
+//   transition-property: fill;
+//   transition-duration: 250ms;
+//   transition-timing-function: $cubic;
 
-  .top-сontacts:hover &,
-  .top-сontacts:focus & {
-    fill: $akcent-color;
-  }
-}
+//   .top-сontacts:hover &,
+//   .top-сontacts:focus & {
+//     fill: $akcent-color;
+//   }
+// }
 
-.envelope {
-  width: 16px;
-  height: 11.2px;
-}
+// .envelope {
+//   width: 16px;
+//   height: 11.2px;
+// }
 
-.smartphone {
-  width: 10px;
-  height: 14.94px;
-}
+// .smartphone {
+//   width: 10px;
+//   height: 14.94px;
+// }

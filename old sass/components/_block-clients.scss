@@ -1,0 +1,89 @@
+/* =========Стилизация блока Постоянные клиенты ================= */
+.section-logo {
+  @include centeredFlex(inline-flex);
+  width: 170px;
+  height: 90px;
+
+  text-decoration: none;
+  border: 1px solid $svg-color;
+  border-radius: 4px;
+  fill: $svg-color;
+
+  @include transitionProperty(border);
+
+  &:hover,
+  &:focus {
+    border: 1px solid $akcent-color;
+  }
+}
+
+.icon-client-first {
+  width: 45px;
+  height: 50px;
+
+  @include transitionProperty(fill);
+
+  .section-logo:hover &,
+  .section-logo:focus & {
+    fill: $akcent-color;
+  }
+}
+.icon-client-second {
+  width: 40px;
+  height: 52px;
+
+  @include transitionProperty(fill);
+
+  .section-logo:hover &,
+  .section-logo:focus & {
+    fill: $akcent-color;
+  }
+}
+
+.icon-client-third {
+  width: 41px;
+  height: 43px;
+
+  @include transitionProperty(fill);
+
+  .section-logo:hover &,
+  .section-logo:focus & {
+    fill: $akcent-color;
+  }
+}
+
+.icon-client-fourth {
+  width: 80px;
+  height: 42px;
+
+  @include transitionProperty(fill);
+
+  .section-logo:hover &,
+  .section-logo:focus & {
+    fill: $akcent-color;
+  }
+}
+
+.icon-client-fifth {
+  width: 59px;
+  height: 47px;
+
+  @include transitionProperty(fill);
+
+  .section-logo:hover &,
+  .section-logo:focus & {
+    fill: $akcent-color;
+  }
+}
+
+.icon-client-sixth {
+  width: 89px;
+  height: 46px;
+
+  @include transitionProperty(fill);
+
+  .section-logo:hover &,
+  .section-logo:focus & {
+    fill: $akcent-color;
+  }
+}

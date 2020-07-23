@@ -1,0 +1,34 @@
+/* ======= Стилизация блока чем мы занимаемся */
+.products {
+  display: none;
+
+  @media screen and (min-width: 1200px) {
+    display: block;
+  }
+}
+
+.wide-card {
+  width: 370px;
+  position: relative;
+
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
+
+  .section-subtitle {
+    margin: 0;
+
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+  }
+}
+
+.secondary-color {
+  color: $title-secondary;
+
+  background-color: $bg-overlay-color;
+  padding: 27px;
+  text-align: center;
+}

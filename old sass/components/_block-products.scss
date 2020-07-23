@@ -1,0 +1,22 @@
+/* ======= Стилизация блока чем мы занимаемся */
+.wide-card {
+  width: 370px;
+  position: relative;
+
+  .section-subtitle {
+    margin: 0;
+
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+  }
+}
+
+.secondary-color {
+  color: $title-secondary;
+
+  background-color: $bg-overlay-color;
+  padding: 27px;
+  text-align: center;
+}

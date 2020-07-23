@@ -1,0 +1,33 @@
+/* ==========Стилизация блока герой============ */
+.hero {
+  @include centeredFlex(flex);
+  text-align: center;
+  background-color: rgb(47, 48, 58);
+  background-image: linear-gradient(
+      to right,
+      $bg-overlay-color,
+      $bg-overlay-color
+    ),
+    url(../images/header-img.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  height: 600px;
+}
+
+.cta {
+  color: $title-secondary;
+}
+
+.cta-title {
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: inherit;
+
+  margin-top: 0;
+  margin-bottom: 30px;
+}

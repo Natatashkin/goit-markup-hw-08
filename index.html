@@ -24,36 +24,47 @@
             <span>Web</span>
             <span class="logo-top">Studio</span>
           </a>
-  
-          <!-- Меню сайта -->
-          <ul class="main-menu">
-            <li class="item"><a href="./index.html" class="link current">Студия</a></li>
-            <li class="item"><a href="./portfolio.html" class="link">Портфолио</a></li>
-            <li class="item"><a href="#" class="link">Контакты</a></li>
-          </ul>
+
+          <!-- Меню бургер -->
+          <button 
+            type="button" 
+            class="menu-button"
+            aria-expanded="false"
+            aria-controls="menu-container"  
+            data-menu-button
+          >
+            <svg width="40" height="40" aria-label="Переключатель мобильного меню">
+              <use class="icon-burger" href="./images/burger-sprite.svg#menu_40px"></use>
+              <use class="icon-cross" href="./images/burger-sprite.svg#close_40px"></use>
+            </svg>
+          </button>
+
+          <!--Основное меню сайта  -->
+          <div class="menu-container" id="menu-container" data-menu>
+            <!-- Меню сайта -->
+            <ul class="main-menu">
+              <li class="item"><a href="./index.html" class="link current">Студия</a></li>
+              <li class="item"><a href="./portfolio.html" class="link">Портфолио</a></li>
+              <li class="item"><a href="#" class="link">Контакты</a></li>
+            </ul>
+            
+            <!-- Контакты: телефон и почта -->
+            <address class="top-address">
+              <a href="mailto:info@devstudio.com" class="top-сontacts">
+                <svg class="envelope">
+                  <use href="./images/sprite.svg#envelope"></use>
+                </svg>
+                info@devstudio.com
+              </a>
+              <a href="tel:+380961111111" class="top-сontacts">
+                <svg class="smartphone">
+                  <use href="./images/sprite.svg#smartphone"></use>
+                </svg>
+                +38 096 111 11 11
+              </a>
+            </address>
+          </div>
         </nav>
-  
-        <!-- Контакты: телефон и почта -->
-        <address class="top-address">
-          <a href="mailto:info@devstudio.com" class="top-сontacts">
-            <svg class="envelope">
-              <use href="./images/sprite.svg#envelope"></use> 
-            </svg>
-            info@devstudio.com
-          </a>
-          <a href="tel:+380961111111" class="top-сontacts">
-            <svg class="smartphone">
-              <use href="./images/sprite.svg#smartphone"></use> 
-            </svg>
-            +38 096 111 11 11
-          </a>
-        </address>
-        <button type="button">
-          <svg class="icon" width="40" height="40">
-            <use href="./images/burger-sprite.svg#menu_40px"></use>
-            <use href="./images/burger-sprite.svg#close_40px"></use>
-          </svg>
-        </button>
       </div>
     </header>
     <!-- основной информационный бок страницы -->
@@ -125,7 +136,7 @@
       </section>
 
       <!-- Секция Чем мы занимаемся-->
-      <section class="section">
+      <section class="section products">
         <div class="container">
           <h2 class="section-title">Чем мы занимаемся</h2>
           <ul class="section-list">
@@ -162,15 +173,16 @@
 
       <!-- Секция Наша команда -->
       <section class="section for-padding">
-        <div class="container for-direction">
+        <div class="container">
           <h2 class="section-title">Наша команда</h2>
           <ul lang="ru-en" class="section-list">
-            <li class="section-item for-shadow">
+            <li class="section-item team-card">
               <img
                   src="./images/John-Smith.jpg"
                   alt="фотография Николая Кучеренко"
                   width="270"
                   height="260"
+                  class="team-photo"
                 />
                 <h3 class="section-subtitle team">Николай Кучеренко</h3>
                 <p class="section-text team-position">Product Designer</p>
@@ -205,7 +217,7 @@
                   </li>
                 </ul>
             </li>
-            <li class="section-item for-shadow">
+            <li class="section-item team-card">
               <img
                   src="./images/Marta-Stewart.jpg"
                   alt="фотография Ольги Ивановой"
@@ -245,7 +257,7 @@
                   </li>
                 </ul>
             </li>
-            <li class="section-item for-shadow">
+            <li class="section-item team-card">
               <img
                 src="./images/Robert-Jakis.jpg"
                 alt="фотография Андрея Шевченко"
@@ -285,7 +297,7 @@
                 </li>
               </ul>
             </li>
-            <li class="section-item for-shadow">
+            <li class="section-item team-card">
               <img
                   src="./images/Martin-Doe.jpg"
                   alt="фотография Ивана Николаева"
@@ -331,9 +343,9 @@
 
       <!-- Секция Постоянные клиенты -->
       <section  class="section top-padding">
-        <div class="container for-direction">
+        <div class="container">
           <h2 class="section-title">Постоянные клиенты</h2>
-          <ul class="section-list">
+          <ul class="section-list client">
             <li class="section-item">
               <a href="#" class="section-logo">
                 <svg class="icon-client-first">
@@ -436,7 +448,7 @@
           </div>
     
           <!-- подвал форма подписки -->
-          <div class="subscribe-form">
+          <!-- <div class="subscribe-form">
             <form action="" method="post" >
               <label for="email">Подпишитесь на рассылку</label>
               <input type="email" name="email" id="email" placeholder="E-mail" class="subscribe-email"/>
@@ -447,7 +459,7 @@
                 </svg>
               </button>
             </form>
-          </div>
+          </div> -->
         </div>
       </div>
     </footer>
@@ -516,6 +528,7 @@
         </div>
       </form>
     </div>
+    <script src="./js/menu.js"></script>
     <script src="./js/modal.js"></script>
   </body>
 </html>

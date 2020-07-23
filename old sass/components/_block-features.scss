@@ -1,0 +1,80 @@
+/*============== Стилизация блока Преимущества =============== */
+.section {
+  color: $text-color;
+  padding-bottom: 94px;
+}
+
+.top-padding {
+  padding-top: 94px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.section-title {
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+
+  margin: 0 0 50px 0;
+}
+
+.section-list {
+  @extend %list;
+  display: flex;
+}
+
+.section-item {
+  width: 270px;
+
+  display: flex;
+  flex-direction: column;
+
+  text-decoration: none;
+  color: inherit;
+  font-size: 14px;
+
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+.icon {
+  @include centeredFlex(inline-flex);
+  width: inherit;
+  height: 120px;
+  padding: 25px 100px;
+
+  background-color: $bg-secondary-color;
+  border-radius: 4px;
+
+  .icon-antenna,
+  .icon-clock,
+  .icon-diagram,
+  .icon-astronaut {
+    width: 70px;
+    height: 70px;
+  }
+}
+
+.section-subtitle {
+  text-transform: uppercase;
+  font-size: inherit;
+
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.section-text {
+  line-height: 1.71;
+
+  margin: 0;
+}

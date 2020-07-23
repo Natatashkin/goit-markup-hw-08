@@ -1,0 +1,93 @@
+.projects-list {
+  @extend %list;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 50px;
+}
+
+.project-card {
+  width: calc((100% - 60px) / 3);
+  margin-right: 30px;
+  margin-bottom: 30px;
+
+  &:nth-child(3n) {
+    margin-right: 0;
+  }
+
+  &:nth-last-child(-n + 3) {
+    margin-bottom: 0;
+  }
+}
+
+.project-item {
+  display: flex;
+  flex-direction: column;
+
+  text-decoration: none;
+  color: inherit;
+  background: #ffffff;
+
+  @include transitionProperty(box-shadow);
+
+  &:hover,
+  &:focus {
+    box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      0px 1px 1px rgba(0, 0, 0, 0.12);
+  }
+
+  & img {
+    display: block;
+    width: 100%;
+  }
+}
+
+.project-overlay {
+  position: relative;
+  overflow: hidden;
+}
+
+.project-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  transform: translateY(100%);
+  @include transitionProperty(transform);
+
+  margin: 0;
+  padding: 0 24px;
+  @include centeredFlex(flex);
+
+  color: $text-hover-color;
+  background-color: $akcent-hover-bg;
+  font-size: 18px;
+  line-height: 1.55;
+
+  .project-item:hover &,
+  .project-item:focus & {
+    transform: translateY(0);
+  }
+}
+
+.card-wrapper {
+  padding: 0 24px;
+
+  border: 1px solid #eeeeee;
+  border-top: 0;
+}
+
+.project-title {
+  margin-top: 20px 0 4px 0;
+
+  font-size: 18px;
+  letter-spacing: 0.06em;
+  line-height: 2;
+}
+
+.project-type {
+  margin: 0 0 20px 0;
+
+  line-height: 1.9;
+}

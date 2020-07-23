@@ -1,0 +1,49 @@
+/* =======Стилизация футера=============== */
+
+.footer-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding-top: 45px;
+  padding-bottom: 28px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.bottom-address {
+  line-height: 1.71;
+
+  margin-right: 69px;
+
+  & > .logo {
+    margin-bottom: 20px;
+    display: block;
+  }
+}
+
+.bottom-contacts {
+  text-decoration: none;
+  color: $text-footer-secondary;
+
+  @include transitionProperty(color);
+
+  &:hover,
+  &:focus {
+    color: $akcent-color;
+  }
+}
+
+// /* ------- Стилизацмя социальных иконок ---------*/
+.social-links {
+  margin-right: 94px;
+}
+
+.social-text {
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.social-footer {
+  fill: $svg-footer;
+  background-color: $svg-bg-footer;
+  border-radius: 50%;
+}
