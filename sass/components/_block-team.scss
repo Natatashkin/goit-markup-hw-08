@@ -47,7 +47,7 @@
   list-style: none;
   padding-left: 0;
 
-  display: flex;
+  @include centeredFlex(flex);
 
   & .social-item:not(:last-child) {
     margin-right: 10px;
@@ -55,7 +55,7 @@
 }
 
 .social-align {
-  justify-content: center;
+  // justify-content: center;
   padding: 0 32px 24px 32px;
 }
 

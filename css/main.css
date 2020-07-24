@@ -496,6 +496,12 @@ footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .social-list .social-item:not(:last-child) {
@@ -503,9 +509,6 @@ footer {
 }
 
 .social-align {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   padding: 0 32px 24px 32px;
 }
 
@@ -565,22 +568,29 @@ footer {
   margin: -15px;
 }
 
+@media screen and (min-width: 1200px) {
+  .client {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+}
+
 .client-item {
-  -ms-flex-preferred-size: calc((100% - 2 * 30) / 2);
-      flex-basis: calc((100% - 2 * 30) / 2);
+  -ms-flex-preferred-size: calc((100% - 2 * 30px) / 2);
+      flex-basis: calc((100% - 2 * 30px) / 2);
   margin: 15px;
 }
 
 @media screen and (min-width: 768px) {
   .client-item {
-    -ms-flex-preferred-size: calc((100% - 3 * 30) / 3);
-        flex-basis: calc((100% - 3 * 30) / 3);
+    -ms-flex-preferred-size: calc((100% - 3 * 30px) / 3);
+        flex-basis: calc((100% - 3 * 30px) / 3);
     margin: 15px;
   }
 }
 
 .section-logo {
-  width: 210px;
+  width: 100%;
   height: 90px;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -717,23 +727,13 @@ footer {
 
 /* =======Стилизация футера=============== */
 .footer-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
-  padding-top: 45px;
-  padding-bottom: 28px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 60px;
+  padding-bottom: 60px;
+  text-align: center;
 }
 
 .bottom-address {
   line-height: 1.71;
-  margin-right: 69px;
 }
 
 .bottom-address > .logo {
@@ -754,10 +754,6 @@ footer {
 
 .bottom-contacts:hover, .bottom-contacts:focus {
   color: #2196f3;
-}
-
-.social-links {
-  margin-right: 94px;
 }
 
 .social-text {
