@@ -7,11 +7,10 @@ label[for="email"] {
 }
 
 .subscribe-email {
-  // width: 358px;
+  display: block;
   width: 100%;
   height: 50px;
   padding: 15px 16px;
-  // margin-right: 12px;
   margin-bottom: 20px;
 
   background-color: transparent;
@@ -33,7 +32,19 @@ label[for="email"] {
     line-height: 1.25;
     font-size: 16px;
   }
+
+  @media screen and (min-width: 480px) and (max-width: 1199px) {
+    width: 450px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    display: inline-block;
+    width: 358px;
+    margin-right: 12px;
+    margin-bottom: 0;
+  }
 }
+
 .button-icon {
   width: 24px;
   height: 24px;

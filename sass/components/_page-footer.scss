@@ -1,33 +1,46 @@
 /* =======Стилизация футера=============== */
 
 .footer-wrapper {
-  // display: flex;
-  // justify-content: space-between;
-  // align-items: baseline;
   padding-top: 60px;
   padding-bottom: 60px;
   text-align: center;
 
-  // padding-top: 45px;
-  // padding-bottom: 28px;
-  // border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    @include centeredFlex(flex);
+    flex-wrap: wrap;
+  }
+
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+
+    text-align: left;
+  }
 }
 
 .bottom-address {
   line-height: 1.71;
   margin-bottom: 60px;
 
-  // margin-right: 69px;
-
   & > .logo {
     margin-bottom: 20px;
     display: block;
+  }
+
+  @media screen and (min-width: 768px) {
+    margin-right: 115px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-right: 69px;
   }
 }
 
 .bottom-contacts {
   text-decoration: none;
   color: $text-footer-secondary;
+  margin-top: 8px;
 
   @include transitionProperty(color);
 
