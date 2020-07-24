@@ -7,13 +7,14 @@
   }
 }
 
-.wide-card {
-  width: 370px;
-  position: relative;
+.product-list {
+  margin: -15px;
+}
 
-  &:not(:last-child) {
-    margin-right: 30px;
-  }
+.wide-card {
+  width: calc((100% - 3 * 30px) / 3);
+  margin: 15px;
+  position: relative;
 
   .section-subtitle {
     margin: 0;
