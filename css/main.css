@@ -1,5 +1,5 @@
 @charset "UTF-8";
-.section-list {
+.main-menu, .section-list {
   padding-left: 0;
   margin: 0;
   list-style: none;
@@ -94,6 +94,7 @@ footer {
 
 .page-header {
   position: relative;
+  border-bottom: 1px solid #ececec;
 }
 
 .nav-wrapper {
@@ -162,18 +163,22 @@ footer {
 }
 
 .menu-container {
-  background-color: red;
+  background-color: #ffffff;
 }
 
 @media screen and (max-width: 767px) {
   .menu-container {
     display: none;
     position: absolute;
-    top: 100%;
+    top: 101%;
     left: 0;
+    width: 100%;
   }
   .menu-container.is-open {
     display: block;
+    text-align: center;
+    padding-top: 60px;
+    padding-bottom: 60px;
   }
 }
 
@@ -186,19 +191,17 @@ footer {
 }
 
 .main-menu {
-  list-style: none;
   letter-spacing: 0.02em;
   font-weight: 500;
-  padding-left: 0;
-  margin: 0 0 0 85px;
+  margin-bottom: 60px;
 }
 
 .link {
   position: relative;
   color: #212121;
   text-decoration: none;
-  display: block;
-  padding: 32px 0;
+  display: inline-block;
+  padding-bottom: 8px;
   -webkit-transition-property: color;
   transition-property: color;
   -webkit-transition-duration: 250ms;
@@ -229,7 +232,67 @@ footer {
 }
 
 .main-menu .item:not(:last-child) {
-  margin-right: 50px;
+  margin-bottom: 40px;
+}
+
+.top-сontacts {
+  color: #757575;
+  text-decoration: none;
+  letter-spacing: 0.02em;
+  font-weight: 500;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.top-сontacts:hover, .top-сontacts:focus {
+  color: #2196f3;
+}
+
+.top-address .top-сontacts:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+.envelope,
+.smartphone {
+  fill: #757575;
+  margin-right: 10px;
+  -webkit-transition-property: fill;
+  transition-property: fill;
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.top-сontacts:hover .envelope,
+.top-сontacts:focus .envelope, .top-сontacts:hover
+.smartphone,
+.top-сontacts:focus
+.smartphone {
+  fill: #2196f3;
+}
+
+.envelope {
+  width: 16px;
+  height: 11.2px;
+}
+
+.smartphone {
+  width: 10px;
+  height: 14.94px;
 }
 
 /* ==============Модальное окно================= */

@@ -17,7 +17,7 @@
   </head>
   <body>
     <!-- Шапка сайта -->
-    <header>
+    <header class="page-header">
       <div class="container nav-wrapper">
         <nav class="top-nav">
           <!-- Логотип сайта -->
@@ -26,36 +26,64 @@
             <span class="logo-top">Studio</span>
           </a>
 
-          <!-- Меню сайта -->
-          <ul class="main-menu">
-            <li class="item">
-              <a href="./index.html" class="link">Студия</a>
-            </li>
-            <li class="item">
-              <a href="./portfolio.html" class="link current">Портфолио</a>
-            </li>
-            <li class="item"><a href="#" class="link">Контакты</a></li>
-          </ul>
-        </nav>
+          <!-- Меню бургер -->
+          <button
+            type="button"
+            class="menu-button"
+            aria-expanded="false"
+            aria-controls="menu-container"
+            data-menu-button
+          >
+            <svg
+              width="40"
+              height="40"
+              aria-label="Переключатель мобильного меню"
+            >
+              <use
+                class="icon-burger"
+                href="./images/burger-sprite.svg#menu_40px"
+              ></use>
+              <use
+                class="icon-cross"
+                href="./images/burger-sprite.svg#close_40px"
+              ></use>
+            </svg>
+          </button>
 
-        <!-- Контакты: телефон и почта -->
-        <address class="top-address">
-          <a href="mailto:info@devstudio.com" class="top-сontacts">
-            <svg class="envelope">
-              <use href="./images/sprite.svg#envelope"></use>
-            </svg>
-            info@devstudio.com
-          </a>
-          <a href="tel:+380961111111" class="top-сontacts">
-            <svg class="smartphone">
-              <use href="./images/sprite.svg#smartphone"></use>
-            </svg>
-            +38 096 111 11 11
-          </a>
-        </address>
+          <!--Основное меню сайта  -->
+          <div class="menu-container" id="menu-container" data-menu>
+            <!-- Меню сайта -->
+            <ul class="main-menu">
+              <li class="item">
+                <a href="./index.html" class="link current">Студия</a>
+              </li>
+              <li class="item">
+                <a href="./portfolio.html" class="link">Портфолио</a>
+              </li>
+              <li class="item">
+                <a href="#" class="link">Контакты</a>
+              </li>
+            </ul>
+
+            <!-- Контакты: телефон и почта -->
+            <address class="top-address">
+              <a href="mailto:info@devstudio.com" class="top-сontacts">
+                <svg class="envelope">
+                  <use href="./images/sprite.svg#envelope"></use>
+                </svg>
+                info@devstudio.com
+              </a>
+              <a href="tel:+380961111111" class="top-сontacts">
+                <svg class="smartphone">
+                  <use href="./images/sprite.svg#smartphone"></use>
+                </svg>
+                +38 096 111 11 11
+              </a>
+            </address>
+          </div>
+        </nav>
       </div>
     </header>
-
     <!-- Основной блок Портфолио -->
     <main>
       <section class="projects">
@@ -402,5 +430,6 @@
         </div>
       </div>
     </footer>
+    <script src="./js/menu.js"></script>
   </body>
 </html>
