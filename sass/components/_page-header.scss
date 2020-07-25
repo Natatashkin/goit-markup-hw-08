@@ -13,6 +13,10 @@
   justify-content: space-between;
   min-width: 100%;
   min-height: 60px;
+
+  @media screen and (min-width: 1200px) {
+    min-height: 80px;
+  }
 }
 
 .menu-button {
@@ -69,7 +73,9 @@
 
   @media screen and (min-width: 768px) {
     display: flex;
-    align-items: center;
+    flex-grow: 1;
+    justify-content: space-between;
+    margin-left: 85px;
   }
 }
 
@@ -97,13 +103,11 @@
 
 .link {
   position: relative;
+  display: inline-block;
+  padding-bottom: 8px;
 
   color: $title-color;
   text-decoration: none;
-
-  display: inline-block;
-
-  padding-bottom: 8px;
 
   transition-property: color;
   transition-duration: 250ms;
@@ -146,7 +150,6 @@
   letter-spacing: 0.02em;
   font-weight: 500;
   // display: inline-flex;
-  @include centeredFlex(flex);
 
   transition-property: color;
   transition-duration: 250ms;
@@ -157,16 +160,44 @@
     color: $akcent-color;
   }
 
-  .top-address &:not(:last-child) {
-    margin-bottom: 16px;
+  @media screen and (max-width: 767px) {
+    @include centeredFlex(flex);
+
+    .top-address &:not(:last-child) {
+      margin-bottom: 16px;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+
+    .top-address &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    display: flex;
+
+    .top-address &:not(:last-child) {
+      margin-right: 30px;
+      margin-bottom: 0;
+    }
   }
 }
 
-// .top-address {
-//   @media screen and (min-width: 768px) {
+.top-address {
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 
-//   }
-// }
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    align-items: center;
+  }
+}
 
 .envelope,
 .smartphone {
