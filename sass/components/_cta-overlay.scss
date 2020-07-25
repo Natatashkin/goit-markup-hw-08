@@ -29,12 +29,6 @@
 /* ---------- ФОрма в модальном окне------------- */
 
 .cta-form {
-  // position: absolute;
-  // top: 50%;
-  // left: 50%;
-  // transform: translate(-50%, -50%);
-
-  // height: 581px;
   position: relative;
   width: 100%;
   padding: 40px;
@@ -186,8 +180,12 @@
 /* ------------поле с checkbox----------------------- */
 
 .form-policy {
-  @include centeredFlex(inline-flex);
+  // @include centeredFlex(inline-flex);
   margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  text-align: left;
+  // flex-wrap: nowrap;
 
   @media screen and (max-width: 1199px) {
     font-size: 12px;
