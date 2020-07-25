@@ -701,9 +701,6 @@ footer {
   .form-policy {
     font-size: 12px;
     line-height: 1.17;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
     width: 100%;
   }
 }
@@ -711,6 +708,8 @@ footer {
 /* ------------- Вариант 1 -  с вложеным input в label ---------------*/
 .checkbox-icon {
   display: inline-block;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
   margin-right: 8px;
   width: 16px;
   height: 15px;

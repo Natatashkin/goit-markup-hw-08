@@ -180,17 +180,15 @@
 /* ------------поле с checkbox----------------------- */
 
 .form-policy {
-  // @include centeredFlex(inline-flex);
   margin-bottom: 30px;
   display: flex;
   align-items: center;
   text-align: left;
-  // flex-wrap: nowrap;
 
   @media screen and (max-width: 1199px) {
     font-size: 12px;
     line-height: 1.17;
-    justify-content: space-between;
+
     width: 100%;
   }
 }
@@ -199,6 +197,7 @@
 
 .checkbox-icon {
   display: inline-block;
+  flex-shrink: 0;
   margin-right: 8px;
   width: 16px;
   height: 15px;
