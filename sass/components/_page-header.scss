@@ -69,6 +69,7 @@
 
   @media screen and (min-width: 768px) {
     display: flex;
+    align-items: center;
   }
 }
 
@@ -76,7 +77,22 @@
   @extend %list;
   letter-spacing: 0.02em;
   font-weight: 500;
-  margin-bottom: 60px;
+
+  @media screen and (max-width: 767px) {
+    margin-bottom: 60px;
+
+    .item:not(:last-child) {
+      margin-bottom: 40px;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+
+    .item:not(:last-child) {
+      margin-right: 40px;
+    }
+  }
 }
 
 .link {
@@ -86,7 +102,7 @@
   text-decoration: none;
 
   display: inline-block;
-  // padding: 32px 0;
+
   padding-bottom: 8px;
 
   transition-property: color;
@@ -96,6 +112,10 @@
   &:hover,
   &:focus {
     color: $akcent-color;
+  }
+
+  @media screen and (min-width: 768px) {
+    padding: 32px 0;
   }
 }
 
@@ -116,10 +136,6 @@
 
     background-color: $akcent-color;
   }
-}
-
-.main-menu .item:not(:last-child) {
-  margin-bottom: 40px;
 }
 
 // /* ------Стилизация блока контактов в шапке------- */
@@ -146,12 +162,11 @@
   }
 }
 
-.top-address {
-  // margin-left: auto;
-  // display: inline-flex;
-  // align-items: center;
-  // display: none;
-}
+// .top-address {
+//   @media screen and (min-width: 768px) {
+
+//   }
+// }
 
 .envelope,
 .smartphone {
