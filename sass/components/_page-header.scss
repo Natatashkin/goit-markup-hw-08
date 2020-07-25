@@ -55,6 +55,7 @@
 
 .menu-container {
   background-color: $bg-main-color;
+  z-index: 1;
 
   @media screen and (max-width: 767px) {
     display: none;
@@ -62,6 +63,7 @@
     top: 101%;
     left: 0;
     width: 100%;
+    z-index: 2;
 
     &.is-open {
       display: block;
