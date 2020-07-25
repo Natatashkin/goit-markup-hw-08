@@ -50,6 +50,10 @@ body {
   line-height: 1.14;
 }
 
+body.modal-open {
+  overflow: hidden;
+}
+
 main {
   background-color: #ffffff;
 }
@@ -170,7 +174,6 @@ footer {
 
 .menu-container {
   background-color: #ffffff;
-  z-index: 1;
 }
 
 @media screen and (max-width: 767px) {
@@ -180,7 +183,7 @@ footer {
     top: 101%;
     left: 0;
     width: 100%;
-    z-index: 2;
+    z-index: 1;
   }
   .menu-container.is-open {
     display: block;
@@ -384,6 +387,90 @@ footer {
   height: 14.94px;
 }
 
+.button {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px;
+  width: 200px;
+  height: 50px;
+  color: inherit;
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+  background-color: #2196f3;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.button:hover, .button:focus {
+  background-color: #188ce8;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+.button:active {
+  -webkit-box-shadow: inset 0px 3px 4px rgba(0, 0, 0, 0.3);
+          box-shadow: inset 0px 3px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* ==========Стилизация блока герой============ */
+.hero {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  background-color: #2f303a;
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.8)), to(rgba(47, 48, 58, 0.8))), url(../images/header-img.jpg);
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.8), rgba(47, 48, 58, 0.8)), url(../images/header-img.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 600px;
+}
+
+.cta {
+  color: #ffffff;
+}
+
+.cta-title {
+  font-weight: 900;
+  font-size: 26px;
+  line-height: 1.61;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: inherit;
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+
+@media screen and (min-width: 1200px) {
+  .cta-title {
+    font-size: 44px;
+    line-height: 1.36;
+  }
+}
+
 /* ==============Модальное окно================= */
 .backdrop {
   position: fixed;
@@ -391,6 +478,9 @@ footer {
   left: 0;
   width: 100%;
   height: 100%;
+  z-index: 2;
+  padding: 94px 15px;
+  overflow-y: scroll;
   background-color: rgba(0, 0, 0, 0.2);
   -webkit-transform: scale(1);
           transform: scale(1);
@@ -419,13 +509,8 @@ footer {
 
 /* ---------- ФОрма в модальном окне------------- */
 .cta-form {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  width: 528px;
-  height: 581px;
+  position: relative;
+  width: 100%;
   padding: 40px;
   background-color: #ffffff;
   -webkit-box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12);
@@ -433,6 +518,23 @@ footer {
   border-radius: 4px;
   letter-spacing: 0.01em;
   text-align: center;
+}
+
+@media screen and (min-width: 480px) {
+  .cta-form {
+    width: 450px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .cta-form {
+    width: 528px;
+  }
 }
 
 /* ----------текст в форме-------------- */
@@ -444,6 +546,12 @@ footer {
   font-weight: 700;
   text-align: center;
   color: #212121;
+}
+
+@media screen and (max-width: 1199px) {
+  .form-title {
+    line-height: 1.5;
+  }
 }
 
 /* -----------------------поля формы-------------------- */
@@ -591,6 +699,17 @@ footer {
   margin-bottom: 30px;
 }
 
+@media screen and (max-width: 1199px) {
+  .form-policy {
+    font-size: 12px;
+    line-height: 1.17;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 100%;
+  }
+}
+
 /* ------------- Вариант 1 -  с вложеным input в label ---------------*/
 .checkbox-icon {
   display: inline-block;
@@ -638,92 +757,15 @@ footer {
   color: #2196f3;
 }
 
+@media screen and (max-width: 1199px) {
+  .policy-link {
+    font-size: 12px;
+    line-height: 1.17;
+  }
+}
+
 .form-button {
   color: #ffffff;
-}
-
-.button {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 10px;
-  width: 200px;
-  height: 50px;
-  color: inherit;
-  text-decoration: none;
-  font-size: 16px;
-  line-height: 1.88;
-  letter-spacing: 0.06em;
-  background-color: #2196f3;
-  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
-  border: none;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.button:hover, .button:focus {
-  background-color: #188ce8;
-  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-}
-
-.button:active {
-  -webkit-box-shadow: inset 0px 3px 4px rgba(0, 0, 0, 0.3);
-          box-shadow: inset 0px 3px 4px rgba(0, 0, 0, 0.3);
-}
-
-/* ==========Стилизация блока герой============ */
-.hero {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  text-align: center;
-  background-color: #2f303a;
-  background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.8)), to(rgba(47, 48, 58, 0.8))), url(../images/header-img.jpg);
-  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.8), rgba(47, 48, 58, 0.8)), url(../images/header-img.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  height: 600px;
-}
-
-.cta {
-  color: #ffffff;
-}
-
-.cta-title {
-  font-weight: 900;
-  font-size: 26px;
-  line-height: 1.61;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: inherit;
-  margin-top: 0;
-  margin-bottom: 30px;
-}
-
-@media screen and (min-width: 1200px) {
-  .cta-title {
-    font-size: 44px;
-    line-height: 1.36;
-  }
 }
 
 /*============== Стилизация блока Преимущества =============== */

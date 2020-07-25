@@ -50,6 +50,10 @@ body {
   line-height: 1.14;
 }
 
+body.modal-open {
+  overflow: hidden;
+}
+
 main {
   background-color: #ffffff;
 }
@@ -170,7 +174,6 @@ footer {
 
 .menu-container {
   background-color: #ffffff;
-  z-index: 1;
 }
 
 @media screen and (max-width: 767px) {
@@ -180,7 +183,7 @@ footer {
     top: 101%;
     left: 0;
     width: 100%;
-    z-index: 2;
+    z-index: 1;
   }
   .menu-container.is-open {
     display: block;

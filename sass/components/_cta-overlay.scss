@@ -6,14 +6,15 @@
   left: 0;
   width: 100%;
   height: 100%;
+  z-index: 2;
+  padding: 94px 15px;
+  overflow-y: scroll;
 
   background-color: rgba(0, 0, 0, 0.2);
   transform: scale(1);
 
   @include transitionProperty(transform);
   @include transitionProperty(background-color);
-
-  //   transition: transform 250ms var(--cubic), background-color 250ms var(--cubic);
 }
 
 .is-hidden {
@@ -28,13 +29,14 @@
 /* ---------- ФОрма в модальном окне------------- */
 
 .cta-form {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  // position: absolute;
+  // top: 50%;
+  // left: 50%;
+  // transform: translate(-50%, -50%);
 
-  width: 528px;
-  height: 581px;
+  // height: 581px;
+  position: relative;
+  width: 100%;
   padding: 40px;
 
   background-color: $bg-main-color;
@@ -43,6 +45,19 @@
 
   letter-spacing: 0.01em;
   text-align: center;
+
+  @media screen and (min-width: 480px) {
+    width: 450px;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 528px;
+  }
 }
 
 /* ----------текст в форме-------------- */
@@ -57,6 +72,10 @@
   text-align: center;
 
   color: $title-color;
+
+  @media screen and (max-width: 1199px) {
+    line-height: 1.5;
+  }
 }
 
 /* -----------------------поля формы-------------------- */
@@ -169,6 +188,13 @@
 .form-policy {
   @include centeredFlex(inline-flex);
   margin-bottom: 30px;
+
+  @media screen and (max-width: 1199px) {
+    font-size: 12px;
+    line-height: 1.17;
+    justify-content: space-between;
+    width: 100%;
+  }
 }
 
 /* ------------- Вариант 1 -  с вложеным input в label ---------------*/
@@ -244,6 +270,11 @@
 
 .policy-link {
   color: $akcent-color;
+
+  @media screen and (max-width: 1199px) {
+    font-size: 12px;
+    line-height: 1.17;
+  }
 }
 
 .form-button {

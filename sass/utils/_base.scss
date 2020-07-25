@@ -7,6 +7,10 @@ body {
   line-height: 1.14;
 }
 
+body.modal-open {
+  overflow: hidden;
+}
+
 main {
   background-color: $bg-main-color;
 }
