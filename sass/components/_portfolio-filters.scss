@@ -1,9 +1,4 @@
 /*---------фильтры потрфолио----------*/
-.projects {
-  font-size: 16px;
-  padding: 94px 0;
-}
-
 .section-list .item:not(:last-child) {
   margin-right: 8px;
 }
@@ -23,6 +18,15 @@
     justify-content: start;
     flex-wrap: wrap;
     width: 450px;
+    margin-bottom: 40px;
+  }
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 30px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 50px;
   }
 }
 
