@@ -88,6 +88,8 @@
 
   @media screen and (max-width: 767px) {
     margin-bottom: 60px;
+    font-size: 18px;
+    line-height: 1.17;
 
     .item:not(:last-child) {
       margin-bottom: 40px;
@@ -189,6 +191,9 @@
 }
 
 .top-address {
+  font-size: 18px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
   @media screen and (min-width: 768px) and (max-width: 1199px) {
     display: flex;
     flex-direction: column;
