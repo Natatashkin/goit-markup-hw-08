@@ -8,12 +8,91 @@
       $bg-overlay-color,
       $bg-overlay-color
     ),
-    url(../images/header-img.jpg);
+    url(../images/hero/hero-450/hero-480.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 
-  height: 600px;
+  height: 400px;
+
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    background-image: linear-gradient(
+        to right,
+        $bg-overlay-color,
+        $bg-overlay-color
+      ),
+      url(../images/hero/hero-450/hero-480@2x.jpg);
+  }
+
+  @media screen and (min-width: 480px) {
+    background-image: linear-gradient(
+        to right,
+        $bg-overlay-color,
+        $bg-overlay-color
+      ),
+      url(../images/hero/hero-768/hero-768.jpg);
+
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: linear-gradient(
+          to right,
+          $bg-overlay-color,
+          $bg-overlay-color
+        ),
+        url(../images/hero/hero-768/hero-768@2x.jpg);
+    }
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1599px) {
+    height: 600px;
+    background-image: linear-gradient(
+        to right,
+        $bg-overlay-color,
+        $bg-overlay-color
+      ),
+      url(../images/hero/hero-1200/hero-1200.jpg);
+
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: linear-gradient(
+          to right,
+          $bg-overlay-color,
+          $bg-overlay-color
+        ),
+        url(../images/hero/hero-1200/hero-1200@2x.jpg);
+    }
+  }
+
+  @media screen and (min-width: 1600px) {
+    height: 600px;
+    background-color: linear-gradient(
+      270deg,
+      #574433 100%,
+      rgba(87, 68, 51, 0) 20%
+    );
+    background-image: linear-gradient(
+        to right,
+        $bg-overlay-color,
+        $bg-overlay-color
+      ),
+      url(../images/hero/hero-1200/hero-1200.jpg);
+    background-size: contain;
+
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: linear-gradient(
+          to right,
+          $bg-overlay-color,
+          $bg-overlay-color
+        ),
+        url(../images/hero/hero-1200/hero-1200@2x.jpg);
+    }
+  }
 }
 
 .cta {
