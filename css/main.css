@@ -496,7 +496,7 @@ footer {
 @media screen and (min-width: 1600px) {
   .hero {
     height: 600px;
-    background-color: linear-gradient(270deg, #574433 100%, rgba(87, 68, 51, 0) 20%);
+    background-color: #574433;
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.8)), to(rgba(47, 48, 58, 0.8))), url(../images/hero/hero-1200/hero-1200.jpg);
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.8), rgba(47, 48, 58, 0.8)), url(../images/hero/hero-1200/hero-1200.jpg);
     background-size: contain;
