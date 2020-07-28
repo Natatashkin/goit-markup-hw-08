@@ -281,6 +281,12 @@ footer {
   text-decoration: none;
   letter-spacing: 0.02em;
   font-weight: 500;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-transition-property: color;
   transition-property: color;
   -webkit-transition-duration: 250ms;
@@ -311,22 +317,12 @@ footer {
 }
 
 @media screen and (min-width: 768px) {
-  .top-сontacts {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
   .top-address .top-сontacts:not(:last-child) {
     margin-bottom: 10px;
   }
 }
 
 @media screen and (min-width: 1200px) {
-  .top-сontacts {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
   .top-address .top-сontacts:not(:last-child) {
     margin-right: 30px;
     margin-bottom: 0;
