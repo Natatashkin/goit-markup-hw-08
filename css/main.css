@@ -97,8 +97,12 @@ footer {
 }
 
 .page-header {
-  position: relative;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
   border-bottom: 1px solid #ececec;
+  background-color: #ffffff;
+  z-index: 1;
 }
 
 .nav-wrapper {
@@ -183,7 +187,7 @@ footer {
     top: 101%;
     left: 0;
     width: 100%;
-    z-index: 1;
+    z-index: 2;
   }
   .menu-container.is-open {
     display: block;
