@@ -151,6 +151,25 @@
 }
 
 // /* ------Стилизация блока контактов в шапке------- */
+.top-address {
+  font-size: 18px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    font-size: 12px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    align-items: center;
+    font-size: inherit;
+  }
+}
 
 .top-сontacts {
   color: $text-color;
@@ -171,47 +190,22 @@
 
   @media screen and (max-width: 767px) {
     @include centeredFlex(flex);
-
     .top-address &:not(:last-child) {
       margin-bottom: 16px;
     }
   }
 
   @media screen and (min-width: 768px) {
-    // display: flex;
-
     .top-address &:not(:last-child) {
       margin-bottom: 10px;
     }
   }
 
   @media screen and (min-width: 1200px) {
-    // display: flex;
-
     .top-address &:not(:last-child) {
       margin-right: 30px;
       margin-bottom: 0;
     }
-  }
-}
-
-.top-address {
-  font-size: 18px;
-  line-height: 1.17;
-  letter-spacing: 0.02em;
-
-  @media screen and (min-width: 768px) and (max-width: 1199px) {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
-    font-size: 12px;
-  }
-
-  @media screen and (min-width: 1200px) {
-    display: flex;
-    align-items: center;
-    font-size: inherit;
   }
 }
 
